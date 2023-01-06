@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        body{
+
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #outer{
+
+            height: 50vh;
+            width: 80vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: yellow;
+        }
+
+        #inner{
+
+            height: 40vh;
+            width: 40vw;
+            background-color: #ff0000;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div id="outer">
+        <div id="inner">
+
+        </div>
+    </div>
+
+
+    <script>
+
+        const outer = document.getElementById('outer');
+        const inner = document.getElementById('inner');
+
+        function outerCall(){
+
+            alert('Outer Call')
+        }
+
+        function innerCall(){
+
+            alert('inner Call')
+        }
+
+        outer.addEventListener('click', outerCall, true);
+        inner.addEventListener('click', innerCall);
+
+
+    </script>
+</body>
+</html>
+
+
+
